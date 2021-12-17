@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 }
 
 a {
@@ -13,4 +12,147 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Serif', serif;
 }
+
+/* Home */
+.summary{
+  cursor: pointer;
+  background-color: rgb(248, 248, 248);
+}
+.summary:hover{
+  background-color: rgb(236, 230, 230);
+}
+.collection__list li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+.main{
+  margin: 8px 15px;
+  display: flex;
+}
+.sidebar{
+  width: 250px;
+  flex-shrink: 0;
+
+}
+.hr{
+  border-color: gray;
+}
+.activeLink{
+  background-color: rgb(236, 230, 230);
+  list-style-type: circle;
+  color: rgb(3, 102, 3);
+}
+.resetBtn{
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  color: rgb(7, 170, 7);
+}
+.resetBtn:hover{
+  background-color: rgb(236, 230, 230);
+}
+.mainResetBtn{
+  margin: 5px 5px 0px 5px;
+  float: right;
+}
+.summary__item{
+  padding: 5px 14px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 5px;
+  align-items: center;
+}
+.summary__item label{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.summary__item:hover{
+  background-color: rgb(236, 230, 230);
+}
+.hideme
+{
+    display:none;
+    visibility:hidden;
+}
+.table{
+  margin: 10px 0px 0px 10px;
+  width: 100%;
+  height: 55px;
+  /* background-color: rgb(240, 240, 240); */
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 30px;
+}
+.main__section{
+  width: 100%;
+}
+.game__items{
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.game__title{
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.game__title:hover{
+  color: rgb(7, 170, 7);
+}
+.game__title:active{
+  color: rgb(2, 2, 2);
+}
+
+.img{
+  max-width: 200px;
+  min-height: 225px;
+}
+/* Home */
+
+/* game */
+
+.game{
+  display: flex;
+  flex-direction: column;
+}
+.game_wrapper{
+  margin: 30px;
+}
+.description{
+  float: right;
+}
+.game_pic{
+  max-width: 500px;
+  margin: 0 auto;
+}
+/* game */
+
+/* Layout */
+.link{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+.link:hover{
+  color: rgb(107, 134, 223)
+}
+.header{
+  background-color: cadetblue;
+}
+/* Layout */
