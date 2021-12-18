@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
+import Pagination from '../components/Pagination';
 import Layout from './../components/Layout';
 
 export const getServerSideProps = async () => {
@@ -24,14 +26,24 @@ export const getServerSideProps = async () => {
 export default function Home({games}) {
   const {asPath} = useRouter();
 
-  debugger
-  console.log("games: " + games);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [gamesPerPage] = useState(12);
+debugger
 
+  const lastGameIndex = currentPage * gamesPerPage;
+  const firstGameIndex = lastGameIndex - gamesPerPage;
+  const currentGames = games.slice(firstGameIndex, lastGameIndex);
+
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
+debugger
   return (
     <Layout>
       <Head>
         <title>Game Catalog</title>
       </Head>
+      <Pagination currentPage={currentPage} paginate={paginate} gamesPerPage={gamesPerPage} totalGames={games.length}/>
       <main className='main container'>
         <aside className='sidebar'>
           <h3>Collections</h3>
@@ -81,7 +93,7 @@ export default function Home({games}) {
             <button className='resetBtn mainResetBtn' type='reset'>Cleare Filters</button>
           </div>
           <div className='game__items'>
-            {games.map((game, i) => (
+            {currentGames.map((game, i) => (
               <article key={i}>
                 
                 <Link href={`/games/${game.id}`}>

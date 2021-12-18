@@ -34,6 +34,9 @@ a {
   margin: 8px 15px;
   display: flex;
 }
+.main_container{
+  margin-bottom: 30px;
+}
 .sidebar{
   width: 250px;
   flex-shrink: 0;
@@ -150,9 +153,66 @@ a {
   margin: 10px;
 }
 .link:hover{
-  color: rgb(107, 134, 223)
+  color: rgb(32, 115, 238)
 }
 .header{
   background-color: cadetblue;
+  padding: 4px 0px;
 }
+.footer{
+  background-color: cadetblue;
+  padding: 1px 0px;
+  text-align: center;
+  color: #fff;
+  margin-top: auto;
+}
+.wrapper{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Layout */
+
+/* Pagination */
+.pagination{
+  display: flex;
+  justify-content: space-between;
+}
+.page_item{
+  list-style-type: none;
+  padding: 4px 10px;
+  
+}
+.pageBtn{
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+.pageBtn:hover{
+  background-color: #5f9ea0;
+  color: #fff;
+
+}
+.pageBtn:active{
+  color: rgb(7, 170, 7);
+}
+
+.activePage{
+  background-color: cadetblue;
+  color: #fff;
+  
+}
+.pagination_container{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+/* Pagination */
+
+/* About */
+.about{
+  text-align: center;
+}
+/* About */

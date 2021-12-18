@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Head from 'next/head';
+import Layout from './../../components/Layout';
 
 const Game = ({game}) => {
     const router =  useRouter();
@@ -9,7 +10,7 @@ debugger
     const {description, genre, developer, release_date, platform, minimum_system_requirements} = game;
 
     return (
-        <>
+        <Layout>
             <Head>
                 <title>{game.title}</title>
             </Head>
@@ -27,7 +28,7 @@ debugger
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }
 
